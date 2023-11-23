@@ -14,6 +14,7 @@ import java.util.List;
 @Repository
 public class UserDBManager {
     public static void UpdtateDetached(User utilisateur){
+        boolean update
         SessionFactory factory = Hibernate.getSessionFactory();
         Session session2 = factory.openSession();
 
