@@ -13,8 +13,8 @@ import java.util.List;
 
 @Repository
 public class UserDBManager {
-    public static void UpdtateDetached(User utilisateur){
-        boolean update
+    public static boolean UpdtateDetached(User utilisateur){
+        boolean update = false;
         SessionFactory factory = Hibernate.getSessionFactory();
         Session session2 = factory.openSession();
 
@@ -26,12 +26,15 @@ public class UserDBManager {
             session2.flush();
             session2.getTransaction().commit();
             Hibernate.shutdown();
+            update = true;
 
         }
         catch(Exception e){
             e.printStackTrace();
             session2.getTransaction().rollback();
+            return false;
         }
+        return update;
 
 
     }

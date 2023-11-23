@@ -2,9 +2,9 @@ package Services;
 
 import Repositories.HibernateDB.UserDBManager;
 
-public class userManagementService {
+public class UserManagementService {
 
-    public static boolean deleteUser(String nom){
+    public  boolean deleteUser(String nom){
         return UserDBManager.deleteUser(nom);
     }
 }

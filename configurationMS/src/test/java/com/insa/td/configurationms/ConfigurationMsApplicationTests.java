@@ -1,10 +1,10 @@
-package com.insa.td.discoveryms;
+package com.insa.td.configurationms;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DiscoveryMsApplicationTests {
+class ConfigurationMsApplicationTests {
 
     @Test
     void contextLoads() {
