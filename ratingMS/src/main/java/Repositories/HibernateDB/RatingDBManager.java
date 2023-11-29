@@ -13,7 +13,7 @@ import java.util.List;
 
 
 @Repository
-public class UserDBManager {
+public class RatingDBManager {
     public static boolean UpdtateDetached(Rating rating){
         boolean update = false;
         SessionFactory factory = Hibernate.getSessionFactory();
@@ -80,7 +80,7 @@ public class UserDBManager {
         return ratings;
     }
 
-    public static boolean deleteRating(Long id){
+    public static boolean deleteRating(long id){
         boolean userDeleted = false;
         Session session = Hibernate.getSessionFactory().openSession();
         String hql = "DELETE FROM Rating WHERE id = :id";
