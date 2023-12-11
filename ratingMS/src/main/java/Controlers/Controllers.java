@@ -13,8 +13,7 @@ public class Controllers {
     RatingService service= new RatingService();
     @PostMapping("/sendComment")
     public boolean postComment(@RequestBody Rating newRating){
-        service.addCommentToDB(newRating);
-
+      return  service.addCommentToDB(newRating);
     }
 
     @GetMapping("/getCommentById/{id}")
